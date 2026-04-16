@@ -47,6 +47,8 @@ Mean Treatment probe rates by family (multi-model families aggregated; single-mo
 
 The gap between the lowest and highest multi-model family means is roughly 11x (Gemma 67.8% / GPT 6.2%). All five GPT variants cluster between 0% and 15.6% — a family-level pattern, not a single-model anomaly.
 
+![Family probe rate clustering across 17 models](https://raw.githubusercontent.com/shivdeep1/metacog-bench/master/figures/family_probe_rate_v7.png)
+
 ### 4.2 Inverse scaling within families
 
 In every multi-model family except Qwen (analyzed separately below), smaller variants probe at least as often as larger siblings. Gemma 4B 90.0% > 27B 45.6%; Claude Haiku 50.0% > Sonnet 22.4% / Opus 25.6%; Gemini 2.5 Flash 31.1% > 2.5 Pro 24.7% > 3.1 Pro 5.6%; GPT Nano 15.6% > OSS variants > 5.4 and Mini 0.0%. Suggestive of behavioral probing being shaped by training curriculum rather than capability scaling.
@@ -58,6 +60,8 @@ In every multi-model family except Qwen (analyzed separately below), smaller var
 **H2 (probe access lifts accuracy).** Confirmatory 340 pairs: mean_diff = 0.000, p = 0.50, d = 0.00. Extended 1,510 pairs: mean_diff = -0.011, p ≈ 0.91, d = -0.03.
 
 We report these outcomes honestly. They fail to support the simplest reading of v6's "monitoring-control tradeoff": tool access does not visibly activate or redistribute latent metacognitive capacity along the axes v6 measured.
+
+![Stated metacognition vs behavioral probe rate (N=14, r = -0.02)](https://raw.githubusercontent.com/shivdeep1/metacog-bench/master/figures/behavioral_vs_stated_v7.png)
 
 ### 4.4 Two informative within-family comparisons
 
@@ -93,9 +97,10 @@ All 17 models produced parseable output across 3,060 trials. Sampled probe execu
 
 **Human baseline collection.** A 5-10 person human pilot on the 40-item high-confidence core would directly address the DeepMind taxonomy's human-anchoring criterion and allow normalized AI-vs-human scoring.
 
-**Embodied multi-agent extension.** Parallel work ("Metacognitive Orchestration in Multi-Agent Systems") extends this framework to population-level meta-learning in open-ended environments — from "does the model self-verify?" to "does the system self-correct at the population level?"
+**Embodied multi-agent extension.** Parallel work ("Metacognitive Orchestration in Multi-Agent Systems", [proposal](https://github.com/shivdeep1/metacog-bench/blob/master/research_proposal/metacognitive_orchestration_proposal.pdf)) extends this framework to population-level meta-learning in open-ended environments — from "does the model self-verify?" to "does the system self-correct at the population level?"
 
 **Benchmark URL:** https://www.kaggle.com/code/shivdeepsingh1/metacog-bench-v6
+**Code + figures + proposal:** https://github.com/shivdeep1/metacog-bench
 
 ## 8. References
 
